@@ -1,0 +1,54 @@
+@import "./../../styles/styles.scss";
+
+.wrapper {
+  width: 100%;
+  padding: 0 20px;
+  @include border(1px, solid, black);
+
+  header {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    .block-info {
+      width: 80%;
+      background-color: $main-background;
+      padding: 0 20px;
+      margin: 5px;
+      @include border(1px, solid, black);
+
+      .logo {
+        img {
+          width: 100px;
+          height: 60px;
+        }
+      }
+
+      .location {
+        margin: 0;
+      }
+    }
+
+    .block-date {
+      width: 20%;
+      background-color: $main-background;
+      padding: 0 20px;
+      margin: 5px;
+      @include border(1px, solid, black);
+      text-align: center;
+
+      .time {
+        font-weight: 700;
+      }
+
+      .date {
+        font-style: italic;
+      }
+    }
+  }
+
+
+
+}
