@@ -3,7 +3,6 @@
 .wrapper {
   width: 100%;
   padding: 0 20px;
-  @include border(1px, solid, black);
 
   header {
     display: flex;
@@ -13,7 +12,10 @@
     padding: 0;
 
     .block-info {
-      width: 80%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 75%;
       background-color: $main-background;
       padding: 0 20px;
       margin: 5px;
@@ -26,29 +28,61 @@
         }
       }
 
-      .location {
-        margin: 0;
+      .location-info {
+        margin-left: 20px ;
+        p {
+          margin: 0;
+          font-weight: 700;
+        }
+
+        ul {
+          margin: 0;
+          li{
+            font-style: italic;
+            display: inline-block;
+            text-decoration: none;
+          }
+        }
       }
     }
 
     .block-date {
-      width: 20%;
+      width: 25%;
       background-color: $main-background;
-      padding: 0 20px;
+      padding: 10px 20px;
       margin: 5px;
       @include border(1px, solid, black);
       text-align: center;
+      vertical-align: middle;
 
       .time {
+        margin: 0;
         font-weight: 700;
       }
 
       .date {
+        margin: 0;
         font-style: italic;
       }
     }
   }
 
 
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    .item-map {
+      width: 75%;
+      margin: 5px;
+    }
+
+    .item-team {
+      width: 25%;
+      margin: 5px;
+    }
+
+  }
 
 }

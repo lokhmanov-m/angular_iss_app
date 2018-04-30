@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { IssService } from '../../services/iss.service';
 import { Subscription } from 'rxjs/Subscription';
+import { IssPosition } from '../../models/iss_position';
+import { Location } from '../../models/location';
+
 
 @Component({
   selector: 'app-home',
@@ -9,24 +12,39 @@ import { Subscription } from 'rxjs/Subscription';
 })
 export class HomeComponent implements OnInit {
 
+  private defaultDate: Date;
   public dateNow: object;
   public timeNow: string;
+  readonly logo = './../../../assets/img/logo-iss.png';
+  public currentLocation: any;
+  // private subscription: any;
 
   constructor( private issService: IssService ) { }
 
   ngOnInit() {
     this.issService.getLocationISS().subscribe((data) => {
-      console.log(data);
+      this.currentLocation = data;
+      console.log(this.currentLocation);
     });
 
-    this.startDate();
+    this.updateLocation();
+    this.getDate();
   }
 
-  private startDate() {
+  private updateLocation() {
     setInterval(() => {
-      const defaultDate = new Date();
-      this.timeNow = defaultDate.toLocaleTimeString('ua', {timeZone: 'UTC', hour: '2-digit', minute: '2-digit'});
-      this.dateNow = defaultDate;
+      this.issService.getLocationISS().subscribe((data) => {
+        this.currentLocation = data;
+        console.log(this.currentLocation);
+      });
+    }, 5000);
+  }
+
+  private getDate() {
+    setInterval(() => {
+      this.defaultDate = new Date();
+      this.timeNow = this.defaultDate.toLocaleTimeString('ua', {timeZone: 'UTC', hour: '2-digit', minute: '2-digit'});
+      this.dateNow = this.defaultDate;
     }, 1000);
   }
 }
