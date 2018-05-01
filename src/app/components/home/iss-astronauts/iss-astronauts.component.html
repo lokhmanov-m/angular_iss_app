@@ -3,7 +3,8 @@
     <div class="block-astronauts">
       <div class="iss-astronauts" *ngFor="let astronaut of astronauts">
         <div class="iss-astronauts_item" *ngIf="astronaut.craft === 'ISS'">
-          <i class="material-icons account">account_circle</i>{{astronaut.name}}
+          <i class="material-icons account">account_circle</i>
+          {{astronaut.name}}
         </div>
       </div>
     </div>

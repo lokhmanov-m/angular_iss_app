@@ -5,7 +5,6 @@ import { IssPosition } from '../models/iss_position';
 import { IssAstronauts } from '../models/iss_astronauts';
 import { Observable } from 'rxjs/Observable';
 
-
 @Injectable()
 export class IssService {
   private urlLocation = environment.issLocationUrl;

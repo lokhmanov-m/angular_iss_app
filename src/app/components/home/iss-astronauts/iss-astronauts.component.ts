@@ -10,7 +10,6 @@ import { IssAstronauts } from '../../../models/iss_astronauts';
 export class IssAstronautsComponent implements OnInit {
 
   public astronauts: IssAstronauts;
-
   public members: number;
 
   constructor( private issService: IssService ) { }
