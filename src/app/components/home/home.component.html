@@ -10,8 +10,8 @@
       <div class="location-info">
         <p>ISS is now located at:</p>
         <ul>
-          <li>latitude: {{currentLocation.iss_position.latitude}}</li>
-          <li>longitude: {{currentLocation.iss_position.longitude}}</li>
+          <li>latitude: {{currentLocation?.latitude}}</li>
+          <li>longitude: {{currentLocation?.longitude}}</li>
         </ul>
       </div>
     </div>
@@ -28,7 +28,7 @@
       <app-map></app-map>
     </div>
     <div class="item-team">
-      <app-iss-team></app-iss-team>
+      <app-iss-astronauts></app-iss-astronauts>
     </div>
   </div>
 </div>

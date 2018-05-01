@@ -12,8 +12,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { IssService } from './services/iss.service';
 import { MapComponent } from './components/home/map/map.component';
 import { AgmCoreModule } from '@agm/core';
-import { IssTeamComponent } from './components/home/iss-team/iss-team.component';
-
+import { IssAstronautsComponent } from './components/home/iss-astronauts/iss-astronauts.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,7 @@ import { IssTeamComponent } from './components/home/iss-team/iss-team.component'
     HomeComponent,
     NotFoundComponent,
     MapComponent,
-    IssTeamComponent
+    IssAstronautsComponent
   ],
   imports: [
     BrowserModule,

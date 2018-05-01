@@ -1,7 +1,6 @@
-import { Location } from './location';
-
-export class IssPosition {
-  iss_position: Location;
+export interface IssPosition {
+  latitude: string;
+  longitude: string;
+  [others: string]: any;
 }
-
 

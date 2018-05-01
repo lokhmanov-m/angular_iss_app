@@ -6,4 +6,5 @@
 export const environment = {
   production: false,
   issLocationUrl: 'http://api.open-notify.org/iss-now.json',
+  issAstronautsUrl: 'http://api.open-notify.org/astros.json'
 };

@@ -1,0 +1,41 @@
+.wrap {
+  width: 100%;
+  min-height: 637px;
+  height: 100%;
+  background-image: url("./../../../assets/img/background.jpg");
+  background-size: cover;
+
+
+  .content {
+    position: relative;
+    top: 200px;
+    margin: 0;
+    padding-left: 10%;
+    color: #fff;
+
+    .title {
+      margin-top: 0;
+      font-size: 64pt;
+      font-weight: 500;
+
+      &::after{
+        content: '';
+        display: block;
+        background-color: #fff;
+        width: 400px;
+        height: 2px;
+      }
+    }
+
+    .problem {
+      font-size: 24pt;
+      font-weight: 500;
+    }
+
+    .text {
+      width: 350px;
+      font-size: 16pt;
+      font-weight: 500;
+    }
+  }
+}

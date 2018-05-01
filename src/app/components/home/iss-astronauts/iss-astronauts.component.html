@@ -1,0 +1,15 @@
+<div class="wrap">
+  <div class="content">
+    <div class="block-astronauts">
+      <div class="iss-astronauts" *ngFor="let astronaut of astronauts">
+        <div class="iss-astronauts_item" *ngIf="astronaut.craft === 'ISS'">
+          <i class="material-icons account">account_circle</i>{{astronaut.name}}
+        </div>
+      </div>
+    </div>
+
+    <div class="members-info">
+      <p>Total amount: {{members}} people on ISS</p>
+    </div>
+  </div>
+</div>

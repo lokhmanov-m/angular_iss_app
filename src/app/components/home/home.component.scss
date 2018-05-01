@@ -3,6 +3,8 @@
 .wrapper {
   width: 100%;
   padding: 0 20px;
+  background-image: url("./../../../assets/img/background.jpg");
+  background-size: cover;
 
   header {
     display: flex;
@@ -67,8 +69,6 @@
     }
   }
 
-
-
   .content {
     display: flex;
     justify-content: space-between;
@@ -82,7 +82,5 @@
       width: 25%;
       margin: 5px;
     }
-
   }
-
 }
